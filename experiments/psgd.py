@@ -6,7 +6,7 @@ from torch.optim.optimizer import Optimizer
 class KFAC(Optimizer):
 
     def __init__(self, net, eps, sua=False, pi=False, update_freq=1,
-                 alpha=1.0, constraint_norm=False):
+                alpha=1.0, constraint_norm=False):
         """ K-FAC Preconditionner for Linear and Conv2d layers.
         Computes the K-FAC of the second moment of the gradients.
         It works for Linear and Conv2d layers and silently skip other layers.

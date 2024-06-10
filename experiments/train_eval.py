@@ -127,10 +127,10 @@ def run(
         logger.close()
     loss, acc, duration = tensor(val_losses), tensor(accs), tensor(durations)
     print('Val Loss: {:.4f}, Test Accuracy: {:.2f} ± {:.2f}, Duration: {:.3f} \n'.
-          format(loss.mean().item(),
-                 100*acc.mean().item(),
-                 100*acc.std().item(),
-                 duration.mean().item()))
+        format(loss.mean().item(),
+                100*acc.mean().item(),
+                100*acc.std().item(),
+                duration.mean().item()))
 
 def train(model, optimizer, data, preconditioner=None, lam=0.):
     model.train()
